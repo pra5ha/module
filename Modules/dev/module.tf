@@ -1,3 +1,3 @@
 module "watermark" {
-  source = "/modules/dev/watermark"
+  source = "../dev/watermarker"
 }
