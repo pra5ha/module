@@ -35,3 +35,9 @@ variable "iam_role" {
 variable "var_version" {
         default = "V19.4.1"
 }
+variable "LC_Name" {
+        default = "watermarker-lc"
+}
+variable "user_data" {
+        default = "../dev/watermarker/user_data.sh"
+}
