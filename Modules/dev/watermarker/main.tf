@@ -23,7 +23,7 @@ resource "aws_launch_configuration" "nv-dev-launch-config" {
 # Autoscaling Group
 
 resource "aws_autoscaling_group" "nv-dev-asg" {
-        name = ""nv-dev-${var.service_name}-ASG"
+        name = "nv-dev-${var.service_name}-ASG"
         availability_zones = ["${var.avaliblity_zone}"]
         launch_configuration = "${aws_launch_configuration.nv-dev-launch-config.id}"
         vpc_zone_identifier = ["${var.subnet_id}"]
