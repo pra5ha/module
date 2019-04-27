@@ -32,12 +32,12 @@ variable "avaliblity_zone" {
 variable "iam_role" {
         default = "admin_access"
 }
-variable "version" {
+variable "var_version" {
         default = "V19.4.1"
 }
 variable "service_name" {
         default = "auth"
 }
 variable "user_data" {
-        default = "../dev/watermarker/user_data.sh"
+        default = "user_data.sh"
 }
