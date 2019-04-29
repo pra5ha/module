@@ -43,10 +43,6 @@ variable "iam_role" {
   default = "admin_access"
 }
 
-variable "version" {
-  default = "V19.4.1"
-}
-
 variable "service_name" {
   default = "auth"
 }
