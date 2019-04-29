@@ -34,12 +34,16 @@ resource "aws_autoscaling_group" "nv-dev-asg" {
   health_check_type    = "ELB"
   load_balancers       = ["${var.load_balancers}"]
 
-  tags = {
-    Name                = "nv-${var.service_name}"
-    Environment         = "Dev"
-    Project             = "reveal-dev"
-    propagate_at_launch = true
-  }
+   tag {
+                key = "Name"
+                value = "nv-dev-${var.service_name}"
+                propagate_at_launch = true
+        }
+   tag {
+                key = "Project"
+                value = "reveal-dev"
+                propagate_at_launch = true
+         }
 
   lifecycle {
     create_before_destroy = true
