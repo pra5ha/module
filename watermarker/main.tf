@@ -6,5 +6,4 @@ module "watermarker" {
   desired_count = "1"
   min_size      = "1"
   max_size      = "2"
-  version       = "19.4.27"
 }
